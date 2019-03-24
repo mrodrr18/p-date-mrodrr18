@@ -63,8 +63,8 @@ public class Date {
 }
 
 public Date(){
-	this.day=23;
-	this.month=03;
+	this.day=01;
+	this.month=01;
 	this.year=2019;	
 	
 	}
@@ -185,6 +185,50 @@ public boolean isSameYearIf(Date another){
 		boolean verdadero;
 		verdadero=((this.year==another.getYear())&&(this.day==another.getDay())&&(this.month==another.getMonth()));
 		return verdadero;
+}
+
+public String getMonthName(){
+	
+		switch(getMonths()){
+			case 1:
+				nombre="enero";
+			break;
+			case 2:
+				nombre="febrero";
+			break;
+			case 3:
+				nombre="marzo";
+			break;
+			case 4:
+				nombre="abril";
+			break;
+			case 5:
+				nombre="mayo";
+			break;
+			case 6:
+				nombre="junio";
+			break;
+			case 7:
+				nombre="julio";
+			break;
+			case 8:
+				nombre="agosto";
+			break;
+			case 9:
+				nombre="septiembre";
+			break;
+			case 10:
+				nombre="octubre";
+			break;
+			case 11:
+				nombre="noviembre";
+			break;
+			case 12:
+				nombre="diciembre";
+			break;
+		}
+		return nombre;
+				
 }
 
 public String toString(){
