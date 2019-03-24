@@ -358,6 +358,104 @@ public int getMonthDayLeft(){
 	return 0;
 }
 
+public int getMonthsSameDate(){
+		for(int i=1;i<=12;i++){
+			if(this.month==1||this.month==3||this.month==5||this.month==7||this.month==8||this.month==10||this.month==12){
+				switch(i){
+					case 1:
+					System.out.println("enero");
+					break;
+					case 3:
+					System.out.println("marzo");
+					break;
+					case 5:
+					System.out.println("mayo");
+					break;
+					case 7:
+					System.out.println("julio");
+					break;
+					case 8:
+					System.out.println("agosto");
+					break;
+					case 10:
+					System.out.println("octubre");
+					break;
+					case 12:
+					System.out.println("diciembre");
+					break;
+				}
+			}
+		else if(this.month==4||this.month==6||this.month==9||this.month==11){
+			switch(i){
+			case 4:
+			System.out.println("abril");
+			break;
+			case 6:
+			System.out.println("junio");
+			break;
+			case 9:
+			System.out.println("septiembre");
+			break;
+			case 11:
+			System.out.println("noviembre");
+			}
+		}
+		else if(this.month==2){
+			switch(i){
+			case 2:
+			System.out.println("febrero");
+			break;
+			}
+		}
+		}
+	return 0;	
+	}
+	public int dayPast(){
+		int suma=0;
+		int mes_31=31;	
+		int mes_30=30;
+		int mes_28=28;
+		int numDias=0;
+			switch(getMonth()){
+				case 1:
+				suma=this.day;
+				break;
+				case 2:
+				suma=this.day+mes_31;
+				break;
+				case 3:
+				suma=this.day+mes_31+mes_28;
+				break;
+				case 4:
+				suma=this.day+mes_31*2+mes_28;
+				break;
+				case 5:
+				suma=this.day+mes_31*2+mes_28+mes_30;
+				break;
+				case 6:
+				suma=this.day+mes_31*3+mes_28+mes_30;
+				break;
+				case 7:
+				suma=this.day+mes_31*3+mes_28+mes_30*2;
+				case 8:	
+				suma=this.day+mes_31*4+mes_28+mes_30*2;
+				case 9:
+				suma=this.day+mes_31*4+mes_28+mes_30*3;
+				break;
+				case 10:
+				suma=this.day+mes_31*5+mes_28+mes_30*3;
+				break;
+				case 11:
+				suma=this.day+mes_31*5+mes_28+mes_30*4;
+				case 12:
+				suma=this.day+mes_31*6+mes_28+mes_30*4;
+				break;
+			}
+	return suma;
+			
+		
+}
+
 
 public String toString(){
 		return this.day + "/" + this.month + "/" + this.year;
