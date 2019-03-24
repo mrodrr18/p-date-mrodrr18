@@ -142,7 +142,53 @@ public Date(){
 	return numDias;	
 }
 
+public boolean isSameYearIf(Date another){
+		if ( this.year == another.getYear() ){
+			return true;
+		}
+		return false;
+	}
+	public boolean isSameYear(Date another){
+		boolean verdadero;
+		verdadero=(this.year==another.getYear());
+		return verdadero;
+	}
+	public boolean isSameMonthIf(Date another){
+		if(this.month == another.getMonth()){
+		return true;
+		}
+		return false;
+	}
+	public boolean isSameMonth(Date another){
+		boolean verdadero;
+		verdadero=(this.month==another.getMonth());
+		return verdadero;
+	}
+	public boolean isSameDayIf(Date another){
+		if(this.day==another.getDay()){
+			return true;
+		}
+		return false;
+	}
+	public boolean isSameDay(Date another){
+		boolean verdadero;
+		verdadero=(this.day==another.getDay());
+		return verdadero;
+	}
+	public boolean isSameIf(Date another){
+		if((this.year == another.getYear())&&(this.month == another.getMonth())&&(this.day==another.getDay())){
+		return true;
+		}
+		return false;
+	}
+	public boolean isSame(Date another){
+		boolean verdadero;
+		verdadero=((this.year==another.getYear())&&(this.day==another.getDay())&&(this.month==another.getMonth()));
+		return verdadero;
+}
+
 public String toString(){
 		return this.day + "/" + this.month + "/" + this.year;
 }
+
 }
