@@ -327,15 +327,7 @@ public String monthsLeft(){
 		}
 	return month.toString();
 	}
-	public String randomDates(){
-		StringBuilder date=new StringBuilder();
-		
-		date=date.append((int)(Math.random()*(31)+1)+" ");
-		date=date.append((int)(Math.random()*(12)+1)+" ");
-		date=date.append((int)(Math.random()*(20)+2018));
-		
-	return date.toString();
-}
+
 
 public String toString(){
 		return this.day + "/" + this.month + "/" + this.year;
