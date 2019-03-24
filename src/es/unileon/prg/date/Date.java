@@ -231,6 +231,95 @@ public String getMonthName(){
 				
 }
 
+public String getMonthSeason(){
+		String estacion=" ";
+		switch(this.month){
+		case 1:
+		case 2:
+			estacion="invierno";
+		break;
+		case 3:
+			if(this.day>1&&this.day<=20){
+				estacion="invierno";
+			}
+			else if(this.day>20&&this.day<=31){
+				estacion="primavera";
+			}
+		break;
+		case 4:
+		case 5:
+			estacion="primavera";
+		break;
+		case 6:
+			if(this.day>1&&this.day<=20){
+				estacion="primavera";
+			}
+			else if(this.day>20&&this.day<=30){
+				estacion="verano";
+			}
+		break;
+		case 7:
+		case 8:
+			estacion="verano";
+		break;
+		case 9:
+			if(this.day>1&&this.day<=20){
+				estacion="verano";
+			}
+			else if(this.day>20&&this.day<=30){
+				estacion="otoño";
+			}
+		break;
+		case 10:
+		case 11:
+			estacion="otoño";
+		break;
+		case 12:
+			if(this.day>1&&this.day<=20){
+				estacion="otoño";
+			}
+			else if(this.day>20&&this.day<=31){
+				estacion="invierno";
+			}
+		break;
+		}
+	return estacion;
+}
+public boolean isDayRight(){
+		boolean verificacion=false;
+		if(this.day<=31){
+			switch(this.month){
+				case 1:
+				case 3:
+				case 5:
+				case 7:
+				case 8:
+				case 10:
+				case 12:
+					 verificacion=true;
+			break;
+			}
+		}
+		if(this.day<=30){
+			switch(this.month){
+			case 4:
+			case 6:
+			case 9:
+			case 11:
+				verificacion=true;
+			break;
+			}
+		}
+		if(this.day<=28){
+			switch(this.month){
+			case 2:
+				verificacion=true;
+			break;
+			}
+		}
+	return verificacion;
+}
+
 public String toString(){
 		return this.day + "/" + this.month + "/" + this.year;
 }
