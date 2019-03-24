@@ -327,6 +327,36 @@ public String monthsLeft(){
 		}
 	return month.toString();
 	}
+public String randomDates(){
+		StringBuilder date=new StringBuilder();
+		
+		date=date.append((int)(Math.random()*(31)+1)+" ");
+		date=date.append((int)(Math.random()*(12)+1)+" ");
+		date=date.append((int)(Math.random()*(20)+2018));
+		
+	return date.toString();
+	}
+	
+	
+public int getMonthDayLeft(){
+			
+		if(this.month==1||this.month==3||this.month==5||this.month==7||this.month==8||this.month==10||this.month==12){
+			for(int i=this.day;i<=31;i++){
+			System.out.print(i+" ");
+			}
+		}
+		else if(this.month==4||this.month==6||this.month==9||this.month==11){
+			for(int i=this.day;i<=30;i++){
+			System.out.print(i+" ");
+			}
+		}
+		else if(this.month==2){
+			for(int i=this.day;i<=28;i++){
+			System.out.print(i+" ");
+			}
+		}
+	return 0;
+}
 
 
 public String toString(){
