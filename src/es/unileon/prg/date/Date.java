@@ -319,6 +319,23 @@ public boolean isDayRight(){
 		}
 	return verificacion;
 }
+public String monthsLeft(){
+	StringBuffer month=new StringBuffer();	
+		for(int i=getMonths();i<=12;i++){
+		month.append(getMonthName()+"\n");
+		this.month=this.month+1;
+		}
+	return month.toString();
+	}
+	public String randomDates(){
+		StringBuilder date=new StringBuilder();
+		
+		date=date.append((int)(Math.random()*(31)+1)+" ");
+		date=date.append((int)(Math.random()*(12)+1)+" ");
+		date=date.append((int)(Math.random()*(20)+2018));
+		
+	return date.toString();
+}
 
 public String toString(){
 		return this.day + "/" + this.month + "/" + this.year;
