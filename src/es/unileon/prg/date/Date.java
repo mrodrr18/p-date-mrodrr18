@@ -62,6 +62,86 @@ public class Date {
 		}
 }
 
+public Date(){
+	this.day=23;
+	this.month=03;
+	this.year=2019;	
+	
+	}
+	public Date(Date fecha){
+	
+	}
+	
+	public int getYear(){
+		return this.year;
+	}
+	public int getMonth(){
+		return this.month;
+	}
+	private int getMonths(){
+		int months=this.month;
+		return months;
+	}
+	public int getDay(){
+		return this.day;
+	}
+	int getDays(){
+	int day=0;
+	switch(this.month){
+			case 1:
+			case 3:
+			case 5:
+			case 7:
+			case 8:
+			case 10:
+			case 12:
+				for(int i=this.day;i<=31;i++){
+				day=this.day;
+				}
+			break;
+			case 4:
+			case 6:
+			case 9:
+			case 11:
+				for(int i=this.day;i<=30;i++){	
+				day=this.day;
+				}
+			break;
+			case 2:
+				for(int i=this.day;i<=28;i++){
+				day=this.day;
+				}
+			break;
+		
+	
+	}
+		return day;
+	}
+	int numDate(){
+	int numDias=0;
+		switch(this.month){
+			case 1:
+			case 3:
+			case 5:
+			case 7:
+			case 8:
+			case 10:
+			case 12:
+			numDias=31;
+			break;
+			case 4:
+			case 6:
+			case 9:
+			case 11:
+			numDias=30;
+			break;
+			case 2:
+			numDias=28;
+			break;
+			}
+	return numDias;	
+}
+
 public String toString(){
 		return this.day + "/" + this.month + "/" + this.year;
 }
