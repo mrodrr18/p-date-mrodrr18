@@ -410,6 +410,7 @@ public int getMonthsSameDate(){
 		}
 	return 0;	
 	}
+
 	public int dayPast(){
 		int suma=0;
 		int mes_31=31;	
@@ -454,6 +455,67 @@ public int getMonthsSameDate(){
 	return suma;
 			
 		
+}
+public int numRandomTimesEqualDate1(){
+		int numIntentos=0;
+		boolean acierto=false;
+		int numAcertar1=this.day;
+		int numAcertar2=this.month;
+			while(!acierto){
+				int diaR=(int)(Math.random()*31+1);
+				int mesR=(int)(Math.random()*12+1);
+				if(diaR==numAcertar1&&mesR==numAcertar2){
+				acierto=true;
+				}
+				else if(diaR!=numAcertar1||mesR!=numAcertar2){
+			numIntentos++;	
+				}
+			}
+		System.out.println("numero de intentos:");
+		return numIntentos;
+		}
+	
+		public int numRandomTimesEqualDate2(){
+		int numIntentos=0;
+		boolean acierto=false;
+			do{
+				int diaR=(int)(Math.random()*31+1);
+				int mesR=(int)(Math.random()*12+1);
+				
+				if(diaR==this.day&&mesR==this.month){
+					acierto=true;
+				}
+				else if(diaR!=this.day||mesR!=this.month){
+				numIntentos++;
+				}	
+			}while(!acierto);
+		return numIntentos;
+	}
+	public String dayOfWeek(){
+		String day=" ";
+		int dia=dayPast();
+		if(dia%7==1){
+		day="tuesday";
+		}
+		else if(dia%7==2){
+		day="wednesday";
+		}
+		else if(dia%7==3){
+		day="thursday";
+		}
+		else if(dia%7==4){
+		day="friday";
+		}
+		else if(dia%7==5){
+		day="saturday";
+		}
+		else if(dia%7==6){
+		day="sunday";
+		}
+		else if(dia%7==0){
+		day="monday";
+		}
+	return day.toString();
 }
 
 
